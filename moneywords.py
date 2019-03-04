@@ -68,7 +68,7 @@ def numberToWords(intnumber):
 					intnumber=0
 				else:
 					string1=num_dic[n_times]
-					main=main+" "+string1
+					main=main+" and "+string1
 					intnumber=intnumber-n_times
 			elif (x==100):
 				string=num_dic[num]+ ' '+nameMap[100]
@@ -132,7 +132,7 @@ def numberToWords(intnumber):
 					intnumber=intnumber-n_times
 			else:
 				string=num_dic[num]
-				main=main+" and "+string
+				main=main+" "+string
 				intnumber=intnumber-n_times
 	print(" {} taka only ".format(main))
 
