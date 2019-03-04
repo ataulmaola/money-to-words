@@ -79,14 +79,14 @@ def numberToWords(intnumber):
 				if num1==0:
 					string=num_dic[num]+ ' '+nameMap[1000]
 					main=main+" "+string
-					intnumber=intnumber-(value*1000)
+					intnumber=intnumber-(value*x_times[4])
 			elif(x==10000):
 				num1=int(strNumber[1])
 				if value==1:
-					xx=intnumber//1000
+					xx=intnumber//x_times[4]
 					string2=num_dic[xx]
 					main=main+" "+string2+" "+nameMap[1000]
-					intnumber=intnumber-(1000*xx)
+					intnumber=intnumber-(x_times[4]*xx)
 				else:
 					if num1==0:
 						string2=num_dic[num*10]
@@ -103,10 +103,10 @@ def numberToWords(intnumber):
 			elif (x==1000000):
 				num1=int(strNumber[1])
 				if value==1:
-					xx=intnumber//100000
+					xx=intnumber//x_times[6]
 					string3=num_dic[xx]
 					main=main+" "+string3+" "+nameMap[100000]
-					intnumber=intnumber-(100000*xx)
+					intnumber=intnumber-(x_times[6]*xx)
 				else:
 					if num1==0:
 						string3=num_dic[num*10]
@@ -122,10 +122,10 @@ def numberToWords(intnumber):
 				intnumber=intnumber-n_times
 			elif(x==100000000):
 				if value==1:
-					xx=intnumber//10000000
+					xx=intnumber//x_times[8]
 					string4=num_dic[xx]
 					main=main+" "+string4+" "+nameMap[10000000]
-					intnumber=intnumber-(10000000*xx)
+					intnumber=intnumber-(x_times[8]*xx)
 				else:
 					string4=num_dic[num*10]
 					main=main+" "+string4
