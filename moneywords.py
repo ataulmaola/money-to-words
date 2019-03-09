@@ -53,6 +53,8 @@ nameMap={0:"",
 
 def numberToWords(intnumber):
 	main=''
+	if(intnumber==0):
+		main=num_dic[0]
 	while (intnumber!=0):		
 			strNumber=str(intnumber)
 			lentgh=len(strNumber)
@@ -134,10 +136,24 @@ def numberToWords(intnumber):
 				string=num_dic[num]
 				main=main+" "+string
 				intnumber=intnumber-n_times
-	print(" {} taka only ".format(main))
+	return "{} taka only \n".format(main)
 
 print("Enter the Number :")
 Intnumber=int(input())
-# for i in range(10000,15000,1):
-# 	numberToWords(i)
-numberToWords(Intnumber)
+takaWords=numberToWords(Intnumber)
+# print("Printing number   in words .....................")
+print(takaWords)
+
+
+
+"""this is for testing purpose """
+
+# print("Enter range :\n")
+# begin=int(input())
+# end=int(input())
+# print("Saving taka in words in a text file.....................")
+# with open("Output.txt", "w") as text_file:
+# 	for i in range(begin,end+1,1):
+# 		text_file.write(str(numberToWords(i)))
+
+	
